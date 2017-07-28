@@ -4,8 +4,6 @@ apply plugin: 'maven'
 group = 'com.example'
 version = '0.0.1-SNAPSHOT'
 
-description = """demo"""
-
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
@@ -21,4 +19,5 @@ exclude(module: 'commons-logging')
 }
 
 task stage(dependsOn: ['clean', 'build'])
+build.mustRunAfter(clean)
 
